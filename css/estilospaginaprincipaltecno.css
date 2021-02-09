@@ -1,0 +1,2390 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.encabezado{
+  height: 100px;
+  background: #34495e;
+  padding: 0 20px;
+  color: #fff;
+}
+.logo{
+  line-height: 100px;
+  float: left;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menu{
+  float: right;
+  line-height: 100px;
+  font-family: 'Montserrat', sans-serif;
+}
+.menu a{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.mostrarmenu,.escondermenu{
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+}
+.mostrarmenu{
+  float: right;
+  z-index: 2;
+}
+.mostrarmenu i{
+  line-height: 100px;
+}
+.menu a:hover,
+.mostrarmenu:hover,
+.escondermenu:hover{
+  color: #3498db;
+  z-index: 2;
+}
+
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+}
+@media screen and (max-width:800px) {
+  .mostrarmenu,.escondermenu{
+    display: block;
+    z-index: 2;
+  }
+  .menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+    z-index: 2;
+  }
+  .menu a{
+    display: block;
+    padding: 20px;
+    z-index: 2;
+  }
+  .escondermenu{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 2;
+  }
+  #chk:checked ~ .menu{
+    right: 0;
+  }
+}
+.fisica{
+  margin-top: 50px;
+  width: 100%;
+}
+#h2fisica{
+  text-align: center;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 35px;
+}
+#pfisica{
+  text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.course{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 500px;
+  transform: translate(-50%,-50%);
+}
+.course .h6card{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course .h2card{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview{
+  background: #e40046;
+  color: #fff;
+  padding: 30px;
+  width: 250px;
+  position: relative;
+}
+.info{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info .pcard{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn{
+  background: #e40046;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.btn:hover{
+  background: #fff;
+  color: #e40046;
+  border: 1px solid #e40046;
+  transform: scale(1.0%);
+}
+@media (max-width: 768px){
+  .course{
+    flex-direction: column;
+    width: 90%;
+  }
+  .preview{
+    width: 100%;
+  }
+  .preview .h2card{
+    margin: 10px 0 0;
+  }
+  .info .h2card{
+    margin: 10px;
+  }
+   .info .pcard{
+    margin-bottom: 50px;
+  }
+  .btn{
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+.course2{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 800px;
+  transform: translate(-50%,-50%);
+}
+.course2 .h6card2{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course2 .h2card2{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview2{
+  background: #b30086;
+  color: #fff;
+  padding: 30px;
+  width: 250px;
+  position: relative;
+}
+.info2{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info2 .pcard2{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn2{
+  background: #b30086;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.btn2:hover{
+  background: #fff;
+  color: #b30086;
+  border: 1px solid #b30086;
+  transform: scale(1.0%);
+}
+@media (max-width: 768px){
+  .course2{
+    flex-direction: column;
+    width: 90%;
+  }
+  .preview2{
+    width: 100%;
+  }
+  .preview2 .h2card2{
+    margin: 10px 0 0;
+  }
+  .info2 .h2card2{
+    margin: 10px;
+  }
+   .info2 .pcard2{
+    margin-bottom: 50px;
+  }
+  .btn2{
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+.course3{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1100px;
+  transform: translate(-50%,-50%);
+}
+.course3 .h6card3{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course3 .h2card3{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview3{
+  background: #0040ff;
+  color: #fff;
+  padding: 30px;
+  width: 250px;
+  position: relative;
+}
+.info3{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info3 .pcard3{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn3{
+  background: #0040ff;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+.btn3:hover{
+  background: #fff;
+  color: #0040ff;
+  border: 1px solid #0040ff;
+  transform: scale(1.0%);
+}
+@media (max-width: 768px){
+  .course3{
+    flex-direction: column;
+    width: 90%;
+  }
+  .preview3{
+    width: 100%;
+  }
+  .preview3 .h2card3{
+    margin: 10px 0 0;
+  }
+  .info3 .h2card3{
+    margin: 10px;
+  }
+   .info3 .pcard3{
+    margin-bottom: 50px;
+  }
+  .btn3{
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 1368px){
+  .fisica{
+  margin-top: 50px;
+  width: 100%;
+}
+#h2fisica{
+  text-align: center;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 35px;
+}
+#pfisica{
+  text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.course{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 500px;
+  transform: translate(-50%,-50%);
+}
+.course .h6card{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course .h2card{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview{
+  background: #e40046;
+  color: #fff;
+  padding: 30px;
+  width: 250px;
+  position: relative;
+}
+.info{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info .pcard{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn{
+  background: #e40046;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 50px;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn:hover{
+  background: #fff;
+  color: #e40046;
+  border: 1px solid #e40046;
+  transform: scale(1.0%);
+}
+.course2{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 800px;
+  transform: translate(-50%,-50%);
+}
+.course2 .h6card2{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course2 .h2card2{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview2{
+  background: #b30086;
+  color: #fff;
+  padding: 30px;
+  width: 250px;
+  position: relative;
+}
+.info2{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info2 .pcard2{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn2{
+  background: #b30086;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 50px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn2:hover{
+  background: #fff;
+  color: #b30086;
+  border: 1px solid #b30086;
+  transform: scale(1.0%);
+}
+.course3{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1100px;
+  transform: translate(-50%,-50%);
+}
+.course3 .h6card3{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course3 .h2card3{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview3{
+  background: #0040ff;
+  color: #fff;
+  padding: 30px;
+  width: 250px;
+  position: relative;
+}
+.info3{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info3 .pcard3{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn3{
+  background: #0040ff;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 50px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn3:hover{
+  background: #fff;
+  color: #0040ff;
+  border: 1px solid #0040ff;
+  transform: scale(1.0%);
+}
+}
+@media only screen and (max-width: 1024px){
+  .fisica{
+  margin-top: 50px;
+  width: 100%;
+}
+#h2fisica{
+  text-align: center;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 35px;
+}
+#pfisica{
+  text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.course{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 500px;
+  transform: translate(-50%,-50%);
+}
+.course .h6card{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course .h2card{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview{
+  background: #e40046;
+  color: #fff;
+  padding: 30px;
+  width: 250px;
+  position: relative;
+}
+.info{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info .pcard{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn{
+  background: #e40046;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 50px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn:hover{
+  background: #fff;
+  color: #e40046;
+  border: 1px solid #e40046;
+  transform: scale(1.0%);
+}
+.course2{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 800px;
+  transform: translate(-50%,-50%);
+}
+.course2 .h6card2{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course2 .h2card2{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview2{
+  background: #b30086;
+  color: #fff;
+  padding: 30px;
+  width: 250px;
+  position: relative;
+}
+.info2{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info2 .pcard2{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn2{
+  background: #b30086;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 50px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn2:hover{
+  background: #fff;
+  color: #b30086;
+  border: 1px solid #b30086;
+  transform: scale(1.0%);
+}
+.course3{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1100px;
+  transform: translate(-50%,-50%);
+}
+.course3 .h6card3{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course3 .h2card3{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview3{
+  background: #0040ff;
+  color: #fff;
+  padding: 30px;
+  width: 250px;
+  position: relative;
+}
+.info3{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info3 .pcard3{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn3{
+  background: #0040ff;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-top: 50px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn3:hover{
+  background: #fff;
+  color: #0040ff;
+  border: 1px solid #0040ff;
+  transform: scale(1.0%);
+}
+}
+@media only screen and (max-width: 768px){
+ .fisica{
+  margin-top: 50px;
+  width: 100%;
+}
+#h2fisica{
+  text-align: center;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 35px;
+}
+#pfisica{
+  text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.course{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 700px;
+  transform: translate(-50%,-50%);
+}
+.course .h6card{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course .h2card{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview{
+  background: #e40046;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info .pcard{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn{
+  background: #e40046;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn:hover{
+  background: #fff;
+  color: #e40046;
+  border: 1px solid #e40046;
+  transform: scale(1.0%);
+}
+.course2{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1100px;
+  transform: translate(-50%,-50%);
+}
+.course2 .h6card2{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course2 .h2card2{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview2{
+  background: #b30086;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info2{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info2 .pcard2{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn2{
+  background: #b30086;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn2:hover{
+  background: #fff;
+  color: #b30086;
+  border: 1px solid #b30086;
+  transform: scale(1.0%);
+}
+.course3{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1500px;
+  transform: translate(-50%,-50%);
+}
+.course3 .h6card3{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course3 .h2card3{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview3{
+  background: #0040ff;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info3{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info3 .pcard3{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn3{
+  background: #0040ff;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn3:hover{
+  background: #fff;
+  color: #0040ff;
+  border: 1px solid #0040ff;
+  transform: scale(1.0%);
+}
+}
+@media only screen and (max-width: 540px){
+ .fisica{
+  margin-top: 50px;
+  width: 100%;
+}
+#h2fisica{
+  text-align: center;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 35px;
+}
+#pfisica{
+  text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.course{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 800px;
+  transform: translate(-50%,-50%);
+}
+.course .h6card{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course .h2card{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview{
+  background: #e40046;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info .pcard{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn{
+  background: #e40046;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn:hover{
+  background: #fff;
+  color: #e40046;
+  border: 1px solid #e40046;
+  transform: scale(1.0%);
+}
+.course2{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1200px;
+  transform: translate(-50%,-50%);
+}
+.course2 .h6card2{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course2 .h2card2{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview2{
+  background: #b30086;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info2{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info2 .pcard2{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn2{
+  background: #b30086;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn2:hover{
+  background: #fff;
+  color: #b30086;
+  border: 1px solid #b30086;
+  transform: scale(1.0%);
+}
+.course3{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1600px;
+  transform: translate(-50%,-50%);
+}
+.course3 .h6card3{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course3 .h2card3{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview3{
+  background: #0040ff;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info3{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info3 .pcard3{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn3{
+  background: #0040ff;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn3:hover{
+  background: #fff;
+  color: #0040ff;
+  border: 1px solid #0040ff;
+  transform: scale(1.0%);
+}
+}
+@media only screen and (max-width: 414px){
+ .fisica{
+  margin-top: 50px;
+  width: 100%;
+}
+#h2fisica{
+  text-align: center;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 35px;
+}
+#pfisica{
+  text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.course{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1000px;
+  transform: translate(-50%,-50%);
+}
+.course .h6card{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course .h2card{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview{
+  background: #e40046;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info .pcard{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn{
+  background: #e40046;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn:hover{
+  background: #fff;
+  color: #e40046;
+  border: 1px solid #e40046;
+  transform: scale(1.0%);
+}
+.course2{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1400px;
+  transform: translate(-50%,-50%);
+}
+.course2 .h6card2{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course2 .h2card2{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview2{
+  background: #b30086;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info2{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info2 .pcard2{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn2{
+  background: #b30086;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn2:hover{
+  background: #fff;
+  color: #b30086;
+  border: 1px solid #b30086;
+  transform: scale(1.0%);
+}
+.course3{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1800px;
+  transform: translate(-50%,-50%);
+}
+.course3 .h6card3{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course3 .h2card3{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview3{
+  background: #0040ff;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info3{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info3 .pcard3{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn3{
+  background: #0040ff;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn3:hover{
+  background: #fff;
+  color: #0040ff;
+  border: 1px solid #0040ff;
+  transform: scale(1.0%);
+}
+}
+@media only screen and (max-width: 411px){
+ .fisica{
+  margin-top: 50px;
+  width: 100%;
+}
+#h2fisica{
+  text-align: center;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 35px;
+}
+#pfisica{
+  text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.course{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1000px;
+  transform: translate(-50%,-50%);
+}
+.course .h6card{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course .h2card{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview{
+  background: #e40046;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info .pcard{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn{
+  background: #e40046;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn:hover{
+  background: #fff;
+  color: #e40046;
+  border: 1px solid #e40046;
+  transform: scale(1.0%);
+}
+.course2{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1400px;
+  transform: translate(-50%,-50%);
+}
+.course2 .h6card2{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course2 .h2card2{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview2{
+  background: #b30086;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info2{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info2 .pcard2{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn2{
+  background: #b30086;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn2:hover{
+  background: #fff;
+  color: #b30086;
+  border: 1px solid #b30086;
+  transform: scale(1.0%);
+}
+.course3{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1800px;
+  transform: translate(-50%,-50%);
+}
+.course3 .h6card3{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course3 .h2card3{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview3{
+  background: #0040ff;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info3{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info3 .pcard3{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn3{
+  background: #0040ff;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn3:hover{
+  background: #fff;
+  color: #0040ff;
+  border: 1px solid #0040ff;
+  transform: scale(1.0%);
+}
+}
+@media only screen and (max-width: 375px){
+ .fisica{
+  margin-top: 50px;
+  width: 100%;
+}
+#h2fisica{
+  text-align: center;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 35px;
+}
+#pfisica{
+  text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.course{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1100px;
+  transform: translate(-50%,-50%);
+}
+.course .h6card{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course .h2card{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview{
+  background: #e40046;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info .pcard{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn{
+  background: #e40046;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn:hover{
+  background: #fff;
+  color: #e40046;
+  border: 1px solid #e40046;
+  transform: scale(1.0%);
+}
+.course2{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1600px;
+  transform: translate(-50%,-50%);
+}
+.course2 .h6card2{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course2 .h2card2{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview2{
+  background: #b30086;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info2{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info2 .pcard2{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn2{
+  background: #b30086;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn2:hover{
+  background: #fff;
+  color: #b30086;
+  border: 1px solid #b30086;
+  transform: scale(1.0%);
+}
+.course3{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 2100px;
+  transform: translate(-50%,-50%);
+}
+.course3 .h6card3{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course3 .h2card3{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview3{
+  background: #0040ff;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info3{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info3 .pcard3{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn3{
+  background: #0040ff;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn3:hover{
+  background: #fff;
+  color: #0040ff;
+  border: 1px solid #0040ff;
+  transform: scale(1.0%);
+}
+}
+@media only screen and (max-width: 360px){
+ .fisica{
+  margin-top: 50px;
+  width: 100%;
+}
+#h2fisica{
+  text-align: center;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 35px;
+}
+#pfisica{
+  text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.course{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1100px;
+  transform: translate(-50%,-50%);
+}
+.course .h6card{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course .h2card{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview{
+  background: #e40046;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info .pcard{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn{
+  background: #e40046;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn:hover{
+  background: #fff;
+  color: #e40046;
+  border: 1px solid #e40046;
+  transform: scale(1.0%);
+}
+.course2{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1600px;
+  transform: translate(-50%,-50%);
+}
+.course2 .h6card2{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course2 .h2card2{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview2{
+  background: #b30086;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info2{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info2 .pcard2{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn2{
+  background: #b30086;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn2:hover{
+  background: #fff;
+  color: #b30086;
+  border: 1px solid #b30086;
+  transform: scale(1.0%);
+}
+.course3{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 2100px;
+  transform: translate(-50%,-50%);
+}
+.course3 .h6card3{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course3 .h2card3{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview3{
+  background: #0040ff;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info3{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info3 .pcard3{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn3{
+  background: #0040ff;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn3:hover{
+  background: #fff;
+  color: #0040ff;
+  border: 1px solid #0040ff;
+  transform: scale(1.0%);
+}
+}
+@media only screen and (max-width: 320px){
+ .fisica{
+  margin-top: 50px;
+  width: 100%;
+}
+#h2fisica{
+  text-align: center;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 35px;
+}
+#pfisica{
+  text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.course{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1100px;
+  transform: translate(-50%,-50%);
+}
+.course .h6card{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course .h2card{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview{
+  background: #e40046;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info .pcard{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn{
+  background: #e40046;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn:hover{
+  background: #fff;
+  color: #e40046;
+  border: 1px solid #e40046;
+  transform: scale(1.0%);
+}
+.course2{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1600px;
+  transform: translate(-50%,-50%);
+}
+.course2 .h6card2{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course2 .h2card2{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview2{
+  background: #b30086;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info2{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info2 .pcard2{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn2{
+  background: #b30086;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn2:hover{
+  background: #fff;
+  color: #b30086;
+  border: 1px solid #b30086;
+  transform: scale(1.0%);
+}
+.course3{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 2100px;
+  transform: translate(-50%,-50%);
+}
+.course3 .h6card3{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course3 .h2card3{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview3{
+  background: #0040ff;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info3{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info3 .pcard3{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn3{
+  background: #0040ff;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn3:hover{
+  background: #fff;
+  color: #0040ff;
+  border: 1px solid #0040ff;
+  transform: scale(1.0%);
+}
+}
+@media only screen and (max-width: 280px){
+ .fisica{
+  margin-top: 50px;
+  width: 100%;
+}
+#h2fisica{
+  text-align: center;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 35px;
+}
+#pfisica{
+  text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+.course{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1400px;
+  transform: translate(-50%,-50%);
+}
+.course .h6card{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course .h2card{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview{
+  background: #e40046;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info .pcard{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn{
+  background: #e40046;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn:hover{
+  background: #fff;
+  color: #e40046;
+  border: 1px solid #e40046;
+  transform: scale(1.0%);
+}
+.course2{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 1900px;
+  transform: translate(-50%,-50%);
+}
+.course2 .h6card2{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course2 .h2card2{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview2{
+  background: #b30086;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info2{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info2 .pcard2{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn2{
+  background: #b30086;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn2:hover{
+  background: #fff;
+  color: #b30086;
+  border: 1px solid #b30086;
+  transform: scale(1.0%);
+}
+.course3{
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 10px 10px rgba(0,0,0,.2);
+  display: flex;
+  max-width: 100%;
+  overflow: hidden;
+  width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 2400px;
+  transform: translate(-50%,-50%);
+}
+.course3 .h6card3{
+  opacity: .6;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+.course3 .h2card3{
+  letter-spacing: 1px;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.preview3{
+  background: #0040ff;
+  color: #fff;
+  padding: 30px;
+  width: 100%;
+  position: relative;
+}
+.info3{
+  padding: 30px;
+  position: relative;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+.info3 .pcard3{
+  font-size: 12px;
+  font-weight: bold;
+}
+.btn3{
+  background: #0040ff;
+  border: 1px solid transparent;
+  box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.btn3:hover{
+  background: #fff;
+  color: #0040ff;
+  border: 1px solid #0040ff;
+  transform: scale(1.0%);
+}
+}

@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+body{
+  justify-content: center;
+  align-items: center;
+}
+.encabezado{
+  height: 100px;
+  background: #34495e;
+  padding: 0 20px;
+  color: #fff;
+}
+.logo{
+  line-height: 100px;
+  float: left;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menu{
+  float: right;
+  line-height: 100px;
+  font-family: 'Montserrat', sans-serif;
+}
+.menu a{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.mostrarmenu,.escondermenu{
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+}
+.mostrarmenu{
+  float: right;
+  z-index: 2;
+}
+.mostrarmenu i{
+  line-height: 100px;
+}
+.menu a:hover,
+.mostrarmenu:hover,
+.escondermenu:hover{
+  color: #3498db;
+  z-index: 2;
+}
+
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+}
+@media screen and (max-width:800px) {
+  .mostrarmenu,.escondermenu{
+    display: block;
+    z-index: 2;
+  }
+  .menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+    z-index: 2;
+  }
+  .menu a{
+    display: block;
+    padding: 20px;
+    z-index: 2;
+  }
+  .escondermenu{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 2;
+  }
+  #chk:checked ~ .menu{
+    right: 0;
+  }
+}
+.contenedorcursos{
+  width: 100%;
+  margin-top: 100px;
+   align-items: center;
+  justify-content: center;
+}
+.title{
+  font-size: 40px;
+  margin-bottom: 60px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+}
+.contenedorcursos img{
+  width: 400px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+    border: 3px solid black;
+  border-radius: 20px;
+}
+.subtitulo{
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.cursos{
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.h1cursos{
+  font-size: 40px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.pcursos{
+  font-size: 19px;
+  font-family: 'Montserrat', sans-serif;
+}
+@media only screen and (max-width: 360px){
+  .contenedorcursos img{
+    width: 300px;
+  }
+}
+.titulo{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 100px;
+  font-weight: 100;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.titulopequeño{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 100px;
+  font-weight: 100;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-bottom: 100px;
+}
+.container{
+  width: 100%;
+  max-width: 1200px;
+  height: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+.container .card{
+  width: 330px;
+  height: 450px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  overflow: hidden;
+  margin: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+.container .card:hover{
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0,0,0,0.2);
+}
+.container .card img{
+  width: 330px;
+  height: 220px;
+}
+.container .card h4{
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+}
+.container .card p{
+  padding: 0 1rem;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+}
+.container .card a{
+  font-family: 'Open Sans', sans-serif;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  color: #2fb4cc;
+  border: 1px solid #2fb4cc;
+  border-radius: 4px;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+.container .card a:hover{
+  background: #2fb4cc;
+  color: #fff;
+}

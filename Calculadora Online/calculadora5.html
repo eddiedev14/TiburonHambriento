@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora Online</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="../DISEÑOS INKSCAPE/LOGO PAGINA WEB CIRCULAR.png">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+	  <link rel="stylesheet" href="../css/estiloscalculadora5.css">
+</head>
+<body>
+  	<div class="encabezado">
+    <h2 class="logo">TIBURON HAMBRIENTO</h2>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="mostrarmenu">
+      <i class="fas fa-ellipsis-h"></i>
+    </label>
+
+    <ul class="menu">
+      <a href="../index.html">Home</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalfisica.html">Física</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalquimica.html">Química</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalbiologia.html">Biología</a>
+      <a href="../Paginas Cursos Materias/paginaprincipaltecno.html">Tecnología</a>
+      <a href="#">Contactanos</a>
+      <label for="chk" class="escondermenu">
+        <i class="fas fa-times"></i>
+      </label>
+    </ul>
+  </div>
+<div class="contenedorcursos">
+      <h1 class="title">Velocidad Final</h1>
+      <center><img src="../assets/img/velocidad-internet-1 (1).jpg"></center>
+      <h1 class="subtitulo">¿En que Consiste?</h1>
+      <p class="pcursos">Bienvenido a la Calculadora sobre las formulas del movimiento uniformemente acelerado, aquí podrás hallar fácilmente la velocidad final de una forma fácil, sencilla y ademas con el proceso a través de la formula de: V0 + a*t donde V0 corresponde a la Velocidad Inicial expresada en m/s, A representa a la aceleración en m/s2 y T al tiempo en s, otra formula la cual es: 2y/t -vi, donde Y es la altura en m, T es el tiempo representado en s y Vi o V0 es la velocidad inicial en m/s, otra formula la cual es: √Vi^2 + 2ay, donde Vi o V0 es la velocidad inicial en m/s, A es la aceleración expresada en m/s2 y Y es la altura expresada en m y la ultima formula para hallar la velocidad final elevada a la 2 es: Vi^2 + 2ay, donde V0 o Vi es la velocidad inicial expresada en m/s, A es la aceleración y Y la altura.</p>
+    </div>
+
+
+    <h1 class="titulocalculadora">Calculadora Velocidad Final</h1>
+    <h1 class="titulocalculadora">Velocidad Final, con Velocidad Inicial, Tiempo y Aceleracion</h1>
+    <h1 class="pasos">Formula de la Velocidad Final: V0 + a*t</h1>
+      <h1 class="pasos">Paso #1 Ingresar Velocidad Inicial:</h1>
+      <center><input type="number" id="numero1" placeholder="V0" required></center>
+       <h1 class="pasos">Paso #2 Ingresar Aceleración:</h1>
+      <center><input type="number" id="numero2" placeholder="Aceleracion" required></center>
+      <h1 class="pasos">Paso #3 Ingresar Tiempo:</h1>
+      <center><input type="number" id="numero3" placeholder="Tiempo" required></center>
+      <div class="buttons">
+        <button class="btn-hover color-2" id="calcular">CALCULAR</button>
+      </div>
+      <center><output id="r"></output></center>
+            <center><output id="procedimiento"></output></center>
+      <center><output id="paso1"></output></center>
+      <center><output id="paso2"></output></center>
+
+
+
+       <h1 class="titulocalculadora">Velocidad Final, con Velocidad Final, Tiempo y Distancia</h1>
+    <h1 class="pasos">Formula de la Velocidad Inicial, basada en a formula de la distancia: 2y/t - Vi</h1>
+      <h1 class="pasos">Paso #1 Ingresar Distancia:</h1>
+      <center><input type="number" id="numero4" placeholder="Distancia" required></center>
+       <h1 class="pasos">Paso #2 Ingresar Tiempo:</h1>
+      <center><input type="number" id="numero5" placeholder="Tiempo" required></center>
+      <h1 class="pasos">Paso #3 Ingresar Velocidad Inicial:</h1>
+      <center><input type="number" id="numero6" placeholder="V0" required></center>
+      <div class="buttons">
+        <button class="btn-hover color-2" id="calcular2">CALCULAR</button>
+      </div>
+      <center><output id="ñ"></output></center>
+       <center><output id="procedimiento2"></output></center>
+      <center><output id="paso3"></output></center>
+      <center><output id="paso4"></output></center>
+      <center><output id="paso5"></output></center>
+
+      <h1 class="titulocalculadora">Velocidad Final, con Velocidad Inicial, Aceleracion y Distancia</h1>
+    <h1 class="pasos">Formula de la Velocidad Final elevada a la 2 para hallar la velocidad: √Vi^2 + 2ay</h1>
+      <h1 class="pasos">Paso #1 Ingresar Velocidad Inicial:</h1>
+      <center><input type="number" id="numero7" placeholder="V0" required></center>
+       <h1 class="pasos">Paso #2 Ingresar Aceleracion:</h1>
+      <center><input type="number" id="numero8" placeholder="Aceleracion" required></center>
+      <h1 class="pasos">Paso #3 Ingresar Distancia:</h1>
+      <center><input type="number" id="numero9" placeholder="Distancia" required></center>
+      <div class="buttons">
+        <button class="btn-hover color-2" id="calcular3">CALCULAR</button>
+      </div>
+      <center><output id="n"></output></center>
+      <center><output id="procedimiento3"></output></center>
+      <center><output id="paso6"></output></center>
+      <center><output id="paso7"></output></center>
+      <center><output id="paso8"></output></center>
+      <center><output id="paso9"></output></center>
+
+       <h1 class="titulocalculadora">Velocidad Final elevada a la 2, con Velocidad Inicial, Aceleracion y Distancia</h1>
+    <h1 class="pasos">Formula de la Velocidad Final elevada a la 2: Vi^2 + 2ay</h1>
+      <h1 class="pasos">Paso #1 Ingresar Velocidad Inicial:</h1>
+      <center><input type="number" id="numero10" placeholder="V0" required></center>
+       <h1 class="pasos">Paso #2 Ingresar Aceleracion:</h1>
+      <center><input type="number" id="numero11" placeholder="Aceleracion" required></center>
+      <h1 class="pasos">Paso #3 Ingresar Distancia:</h1>
+      <center><input type="number" id="numero12" placeholder="Distancia" required></center>
+      <div class="buttons">
+        <button class="btn-hover color-2" id="calcular4">CALCULAR</button>
+      </div>
+      <center><output id="j"></output></center>
+       <center><output id="procedimiento4"></output></center>
+      <center><output id="paso10"></output></center>
+      <center><output id="paso11"></output></center>
+      <center><output id="paso12"></output></center>
+
+      <script type="text/javascript" src="../js/jscalculadora5.js"></script>
+  </body>
+  </html>

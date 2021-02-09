@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora Online</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="../DISEÑOS INKSCAPE/LOGO PAGINA WEB CIRCULAR.png">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+	  <link rel="stylesheet" href="../css/estiloscalculadora8.css">
+</head>
+<body>
+  	<div class="encabezado">
+    <h2 class="logo">TIBURON HAMBRIENTO</h2>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="mostrarmenu">
+      <i class="fas fa-ellipsis-h"></i>
+    </label>
+
+    <ul class="menu">
+      <a href="../index.html">Home</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalfisica.html">Física</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalquimica.html">Química</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalbiologia.html">Biología</a>
+      <a href="../Paginas Cursos Materias/paginaprincipaltecno.html">Tecnología</a>
+      <a href="#">Contactanos</a>
+      <label for="chk" class="escondermenu">
+        <i class="fas fa-times"></i>
+      </label>
+    </ul>
+  </div>
+<div class="contenedorcursos">
+      <h1 class="title">Aceleración</h1>
+      <center><img src="../assets/img/descarga (15).jpg"></center>
+      <h1 class="subtitulo">¿En que Consiste?</h1>
+      <p class="pcursos">Bienvenido a la Calculadora sobre las formulas del movimiento uniformemente acelerado, aquí podrás hallar fácilmente la aceleración de una forma fácil, sencilla y ademas con el proceso a través de la formula de: Vf-V0/T, donde Vf es la velocidad final en m/s, V0 o Vi es la velocidad inicial en m/s y T el tiempo en s.</p>
+    </div>
+
+
+    <h1 class="titulocalculadora">Calculadora Aceleracion</h1>
+    <h1 class="titulocalculadora">Aceleracion, con Velocidad Inicial, Velocidad Final y Tiempo</h1>
+    <h1 class="pasos">Formula de la Aceleracion: Vf-V0/T</h1>
+      <h1 class="pasos">Paso #1 Ingresar Velocidad Final:</h1>
+      <center><input type="number" id="numero1" placeholder="VF" required></center>
+       <h1 class="pasos">Paso #2 Ingresar Velocidad Inicial:</h1>
+      <center><input type="number" id="numero2" placeholder="V0" required></center>
+      <h1 class="pasos">Paso #3 Ingresar Tiempo:</h1>
+      <center><input type="number" id="numero3" placeholder="Tiempo" required></center>
+      <div class="buttons">
+        <button class="btn-hover color-2" id="calcular">CALCULAR</button>
+      </div>
+      <center><output id="r"></output></center>
+      <center><output id="procedimiento"></output></center>
+      <center><output id="paso1"></output></center>
+       <center><output id="paso2"></output></center>
+      <script type="text/javascript" src="../js/jscalculadora8.js"></script>
+  </body>
+  </html>

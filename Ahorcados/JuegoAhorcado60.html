@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Juego Ahorcado Interactivo</title>
+	<link rel="icon" type="image/png" href="../DISEÑOS INKSCAPE/LOGO PAGINA WEB CIRCULAR.png">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/estilosahorcado60.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+</head>
+<body>
+	 <div class="encabezado">
+    <h2 class="logo">TIBURON HAMBRIENTO</h2>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="mostrarmenu">
+      <i class="fas fa-ellipsis-h"></i>
+    </label>
+
+    <ul class="menu">
+      <a href="../index.html">Home</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalfisica.html">Física</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalquimica.html">Química</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalbiologia.html">Biología</a>
+      <a href="../Paginas Cursos Materias/paginaprincipaltecno.html">Tecnología</a>
+      <a href="#">Contactanos</a>
+      <label for="chk" class="escondermenu">
+        <i class="fas fa-times"></i>
+      </label>
+    </ul>
+  </div>
+	<div class="contenedorcursos">
+  		<h1 class="title">Juego Ahorcado Tema 3 Tecnología</h1>
+  		<center><img src="../assets/img/IMAGENENQUECONSISTEAHORCADO.png"></center>
+  		<h1 class="subtitulo">¿En que Consiste?</h1>
+  		<p class="pcursos">En este tema se plantean interrogantes sobre los diferentes criterios que componen funciones de almacenamiento de datos, interpretación, consultas, inserción de información, suprimir información, remplazar datos, a través de aplicación lógicas para gestionarlas.</p>
+  	</div>
+	<div class="MostrarOcultardiv">
+		<center><p class="titulopistas">
+        				Pistas
+		<center><p class="ppistas">
+        				Bienvenido a la sección de pistas de nuestro juego, aquí dispondrás de un total de 2 pistas para la solución de este interrogante, a continuación se presentará una imagen de una bombilla, dale click para que aparezca la pista
+        			</p></center>
+	<center><button onclick="mostrar();"><img id="mostrar" src="../assets/img/f4ccc35cf8d810284cb7edefd7878157-icono-de-bombilla-by-vexels.png"></button><button onclick="ocultar();"><img id="ocultar" src="../assets/img/PISTA CERRAR.png"></center></button>
+        			<center><p id="MostrarOcultar">Es la abreviación de create, read, update y delete.</p></center>
+        			<center><button onclick="mostrar2();"><img id="mostrar2" src="../assets/img/f4ccc35cf8d810284cb7edefd7878157-icono-de-bombilla-by-vexels.png"></button><button onclick="ocultar2();"><img id="ocultar2" src="../assets/img/PISTA CERRAR.png"></center></button>
+        			<center><p id="MostrarOcultar2">Estas operaciones hacen referencia a la interacción de la aplicación con la base de datos o la capa de almacenamiento de información.</p></center>
+        			</div>
+	<p class="pahorcado">Introduzca una letra, por favor.</p>
+	<input type="text" id="letra" maxlength="1" style="text-transform:lowercase;" value=""  onkeyup="javascript:this.value=this.value.toLowerCase();">
+	<div>
+  <button id="calcular">Validar Tecla</button>
+  </div>
+  <p id="output"></p>
+  <h1 class="contadorfallos">Contador de Fallos: 0</h1>
+  <h1 class="advertencia"></h1>
+  <h1 class="palabrashalladas"></h1>
+  <h1 class="palabrashalladasmalas"></h1>
+  <h1 class="respuesta">Has Finalizado el Juego mira tu Respuesta</h1>
+  <i class="fas fa-arrow-down" id="iflecha"></i>
+    <div id="ganadordiv">
+   <h1 class="h1ganador">Felicitaciones has adivinado la Palabra Correcta</h1>
+   <a href="JuegoAhorcado60.html"><button class="botonefecto">Volver a Jugar</button></a>
+   <br>
+   <a href="../Infos/info60.html"><button class="botonefecto2">Quiero Aprender Mas</button> </a>
+   <br>
+   <a href="../index.html"><button class="botonefecto4">Volver a la Pagina Principal</button>  </a>
+  </div>
+  <div id="perdedordiv">
+   <h1 class="h1perdedor">Perdiste, Has tenido mala suerte</h1>
+   <a href="JuegoAhorcado60.html"><button class="botonefecto">Volver a Jugar</button></a>
+   <br>
+   <a href="../Infos/info60perdedor.html"><button class="botonefecto2">Quiero Aprender Mas</button></a>
+   <br>
+   <a href="../index.html"><button class="botonefecto3">Volver a la Pagina Principal</button>  </a>
+  </div>
+  <div id="button-up">
+  <i class="fas fa-chevron-up"></i>
+</div>
+  <div id="ahorcado">
+  </div>
+<script src="../js/ahorcado60.js"></script>
+</body>
+</html>

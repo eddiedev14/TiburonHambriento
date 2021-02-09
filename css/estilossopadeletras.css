@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+body{
+  justify-content: center;
+  align-items: center;
+
+}
+.encabezado{
+  height: 100px;
+  background: #34495e;
+  padding: 0 20px;
+  color: #fff;
+}
+.logo{
+  line-height: 100px;
+  float: left;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.menu{
+  float: right;
+  line-height: 100px;
+  font-family: 'Montserrat', sans-serif;
+}
+.menu a{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.mostrarmenu,.escondermenu{
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+}
+.mostrarmenu{
+  float: right;
+  z-index: 2;
+}
+.mostrarmenu i{
+  line-height: 100px;
+}
+.menu a:hover,
+.mostrarmenu:hover,
+.escondermenu:hover{
+  color: #3498db;
+  z-index: 2;
+}
+
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+}
+@media screen and (max-width:800px) {
+  .mostrarmenu,.escondermenu{
+    display: block;
+    z-index: 2;
+  }
+  .menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+    z-index: 2;
+  }
+  .menu a{
+    display: block;
+    padding: 20px;
+    z-index: 2;
+  }
+  .escondermenu{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 2;
+  }
+  #chk:checked ~ .menu{
+    right: 0;
+  }
+}
+.sopadeletras{
+  width: 100%;
+  margin-top: 100px;
+  border-top: 6px solid #65d6a6;
+   align-items: center;
+  justify-content: center;
+}
+.title{
+  font-size: 40px;
+  margin-bottom: 60px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+}
+.sopadeletras img{
+  width: 400px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+.subtitulo{
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.penqueconsiste{
+font-size: 18px;
+margin-top: 20px;
+text-align: center;
+font-family: 'Montserrat', sans-serif;
+}
+.pasos{
+  width: 100%;
+  margin-top: 100px;
+}
+.h1pasos{
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.ppasos{
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+.container{
+  margin-top: 100px;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card{
+  height: 280px;
+  max-width: 350px;
+  margin: 0 20px;
+  background: white;
+  transition: 0.4s;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+.card:hover{
+  height: 470px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.2);
+}
+.card .img{
+  height: 200px;
+  width: 100%;
+}
+.card .img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.card .top-text{
+  padding: 5px;
+}
+.card .top-text .name{
+  font-size: 25px;
+  font-weight: 600;
+  color: #202020;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.card .top-text p{
+  font-size: 20px;
+  font-weight: 600;
+  color: #e74c3c;
+  line-height: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.card .bottom-text{
+  padding: 0 20px 10px 20px;
+  margin-top: 5px;
+  background: white;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s;
+  font-family: 'Montserrat', sans-serif;
+}
+.card:hover .bottom-text{
+  opacity: 1;
+  visibility: visible;
+}
+.card .bottom-text .text{
+  text-align: justify;
+  font-family: 'Montserrat', sans-serif;
+}
+.card .bottom-text .btn{
+  margin: 10px 0;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+.card .bottom-text .btn a{
+  text-decoration: none;
+  background: #e74c3c;
+  color: #f2f2f2;
+  padding: 5px 8px;
+  border-radius: 3px;
+  display: inline-flex;
+  transition: 0.2s;
+  font-family: 'Montserrat', sans-serif;
+}
+.card .bottom-text .btn a:hover{
+  transform: scale(0.9);
+}
+@media screen and (max-width: 978px) {
+  .container{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .card{
+    max-width: 700px;
+    margin: 20px 0;
+  }
+}
+.buttons{
+  margin: 10%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.btn-hover{
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+
+
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition:all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.btn-hover:hover{
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition:all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+.btn-hover:focus{
+  outline: none;
+}
+.btn-hover.color-10{
+  background-image: linear-gradient(to right, #eb3941, #ec8c69, #f1786a, #FBB03B);
+  box-shadow: 0 4px 15px 0 rgba(236,116,149,0.75);
+}
+.bottom-text .text .li{
+  margin-top: 20px;
+}
+.buttons .titulosopadeletras{
+  margin-bottom: 100px;
+}
+.titulosopadeletras{
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+#button-up{
+  width: 60px;
+  height: 60px;
+  background: #46a2fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  border: 4px solid transparent;
+  transition: all 300ms ease;
+}
+#button-up:hover{
+  transform: scale(1.1);
+  border-color: rgba(0,0,0,0.1);
+}
+.footer{

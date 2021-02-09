@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora Online</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="../DISEÑOS INKSCAPE/LOGO PAGINA WEB CIRCULAR.png">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+	  <link rel="stylesheet" href="../css/estiloscalculadora6.css">
+</head>
+<body>
+  	<div class="encabezado">
+    <h2 class="logo">TIBURON HAMBRIENTO</h2>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="mostrarmenu">
+      <i class="fas fa-ellipsis-h"></i>
+    </label>
+
+    <ul class="menu">
+      <a href="../index.html">Home</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalfisica.html">Física</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalquimica.html">Química</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalbiologia.html">Biología</a>
+      <a href="../Paginas Cursos Materias/paginaprincipaltecno.html">Tecnología</a>
+      <a href="#">Contactanos</a>
+      <label for="chk" class="escondermenu">
+        <i class="fas fa-times"></i>
+      </label>
+    </ul>
+  </div>
+<div class="contenedorcursos">
+      <h1 class="title">Altura</h1>
+      <center><img src="../assets/img/descarga (14).jpg"></center>
+      <h1 class="subtitulo">¿En que Consiste?</h1>
+      <p class="pcursos">Bienvenido a la Calculadora sobre las formulas del movimiento uniformemente acelerado, aquí podrás hallar fácilmente la altura  de una forma fácil, sencilla y ademas con el proceso a través de la formula de: (V0+VF/2)*t donde V0 corresponde a velocidad inicial expresado en m/s, Vf es la velocidad final en m/s y T el tiempo en segundos, otra formula es: VF*T-0.5at^2, donde Vf es la velocidad final en m/s, T el tiempo en s y A la aceleración expresada en m/s2 y la ultima formula: V0*T+0.5at^2 donde V0 es la velocidad inicial en m/s, T el tiempo en s y A la aceleración.</p>
+    </div>
+
+
+    <h1 class="titulocalculadora">Calculadora Altura</h1>
+    <h1 class="titulocalculadora">Altura, con Tiempo, Velocidad  Inicial y Velocidad Final</h1>
+    <h1 class="pasos">Formula de la Altura #1: (V0+VF/2)*t</h1>
+      <h1 class="pasos">Paso #1 Ingresar Velocidad Inicial:</h1>
+      <center><input type="number" id="numero1" placeholder="V0" required></center>
+       <h1 class="pasos">Paso #2 Ingresar Velocidad Final:</h1>
+      <center><input type="number" id="numero2" placeholder="VF" required></center>
+      <h1 class="pasos">Paso #3 Ingresar Tiempo:</h1>
+      <center><input type="number" id="numero3" placeholder="Tiempo" required></center>
+      <div class="buttons">
+        <button class="btn-hover color-2" id="calcular">CALCULAR</button>
+      </div>
+      <center><output id="r"></output></center>
+       <center><output id="procedimiento"></output></center>
+      <center><output id="paso1"></output></center>
+      <center><output id="paso2"></output></center>
+      <center><output id="paso3"></output></center>
+
+
+
+       <h1 class="titulocalculadora">Altura, con Velocidad Final, Tiempo y Aceleracion</h1>
+    <h1 class="pasos">Formula de la Altura #2: VF*T-0.5at^2</h1>
+      <h1 class="pasos">Paso #1 Ingresar Velocidad Final:</h1>
+      <center><input type="number" id="numero4" placeholder="VF" required></center>
+       <h1 class="pasos">Paso #2 Ingresar Tiempo:</h1>
+      <center><input type="number" id="numero5" placeholder="Tiempo" required></center>
+      <h1 class="pasos">Paso #3 Ingresar Aceleracion:</h1>
+      <center><input type="number" id="numero6" placeholder="Aceleracion" required></center>
+      <div class="buttons">
+        <button class="btn-hover color-2" id="calcular2">CALCULAR</button>
+      </div>
+      <center><output id="ñ"></output></center>
+      <center><output id="procedimiento2"></output></center>
+      <center><output id="paso4"></output></center>
+      <center><output id="paso5"></output></center>
+      <center><output id="paso6"></output></center>
+
+
+      <h1 class="titulocalculadora">Altura, con Velocidad Inicial, Aceleracion y Distancia</h1>
+    <h1 class="pasos">Formula de la Altura #3: V0*T+0.5at^2</h1>
+      <h1 class="pasos">Paso #1 Ingresar Velocidad Inicial:</h1>
+      <center><input type="number" id="numero7" placeholder="V0" required></center>
+       <h1 class="pasos">Paso #2 Ingresar Tiempo:</h1>
+      <center><input type="number" id="numero8" placeholder="Tiempo" required></center>
+      <h1 class="pasos">Paso #3 Ingresar Aceleracion:</h1>
+      <center><input type="number" id="numero9" placeholder="Aceleracion" required></center>
+      <div class="buttons">
+        <button class="btn-hover color-2" id="calcular3">CALCULAR</button>
+      </div>
+      <center><output id="n"></output></center>
+      <center><output id="procedimiento3"></output></center>
+      <center><output id="paso7"></output></center>
+      <center><output id="paso8"></output></center>
+      <center><output id="paso9"></output></center>
+
+      <script type="text/javascript" src="../js/jscalculadora6.js"></script>
+  </body>
+  </html>

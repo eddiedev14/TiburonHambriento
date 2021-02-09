@@ -1,0 +1,2649 @@
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.encabezado{
+  height: 100px;
+  background: #34495e;
+  padding: 0 20px;
+  color: #fff;
+  margin-bottom: 50px;
+  font-family: "montserrat",sans-serif;
+}
+.logo{
+  line-height: 100px;
+  float: left;
+  text-transform: uppercase;
+}
+.logo2{
+  float: left;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+}
+.menu{
+  float: right;
+  line-height: 100px;
+}
+.menu a{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.mostrarmenu,.escondermenu{
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  z-index: 2;
+}
+.mostrarmenu{
+  float: right;
+  z-index: 2;
+}
+.mostrarmenu i{
+  line-height: 100px;
+}
+.menu a:hover,
+.mostrarmenu:hover,
+.escondermenu:hover{
+  color: #3498db;
+  z-index: 2;
+}
+
+#chk{
+  position: absolute;
+  visibility: hidden;
+  z-index: 2;
+}
+@media screen and (max-width:800px) {
+  .mostrarmenu,.escondermenu{
+    display: block;
+    z-index: 2;
+  }
+  .menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 80px 0;
+    line-height: normal;
+    transition: 0.7s;
+    z-index: 2;
+  }
+  .menu a{
+    display: block;
+    padding: 20px;
+    z-index: 2;
+  }
+  .escondermenu{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 2;
+  }
+  #chk:checked ~ .menu{
+    right: 0;
+  }
+}
+
+.ppistas{
+    font-family: "montserrat",sans-serif;
+    font-size: 20px;
+     margin-top: 30px;
+     margin-bottom: 20px;
+}
+.titulopistas{
+    font-size: 40px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+}
+.respuesta{
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 50px;
+  display: none;
+}
+.contadorfallos{
+  align-items: center;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 50px;
+}
+.advertencia{
+   align-items: center;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 50px;
+  display: none;
+  color: #a22;
+}
+.palabrashalladas{
+   align-items: center;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 50px;
+  display: none;
+  color: #1e6;
+}
+.palabrashalladasmalas{
+   align-items: center;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 50px;
+  display: none;
+  color: #a22;
+}
+.advertenciaespacios{
+   align-items: center;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin-top: 50px;
+}
+#ahorcado{
+  height: 242px;
+  width: 289px;
+  margin-top: 150px;
+  background-image: url('../assets/img/Imagen Ahorcados.png');
+  position: absolute;
+    right: 50%;
+    display: block;
+}
+#iflecha{
+  font-size: 40px;
+  margin-top: 50px;
+  color: #3b83bd;
+  display: none;
+}
+.container{
+  width: 480px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.container a{
+  position: relative;
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  transition: 0.5s;
+  color: white;
+  align-items: center;
+  background: linear-gradient(to right, #a18cd1, #fbc2eb, #a18cd1);
+}
+#output{
+  font-size: 40px;
+  font-family: "montserrat",sans-serif;
+}
+#perdedordiv{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: none;
+}
+.h1perdedor{
+  font-size: 25px;
+  color: #a22;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 12px;
+  text-align: center;
+}
+#ganadordiv{
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: none;
+}
+.h1ganador{
+  font-size: 25px;
+  color: #1e6;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 12px;
+  text-align: center;
+}
+.botonefecto{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #27a745;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto:after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-top: 1.5px solid #27a745;
+  border-left: 1.5px solid #27a745;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transition: all 0.2s;
+}
+.botonefecto:before{
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-bottom: 1.5px solid #27a745;
+  border-right: 1.5px solid #27a745;
+  position: absolute;
+  left: -1;
+  right: 0;
+  bottom: 0;
+  top: -1;
+  transition: all 0.2s;
+}
+.botonefecto:hover:after{
+  width: 185px;
+  height: 55px;
+}
+.botonefecto:hover:before{
+  width: 185px;
+  height: 55px;
+}
+.botonefecto2{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #0062cc;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto2:after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-top: 1.5px solid #0062cc;
+  border-left: 1.5px solid #0062cc;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transition: all 0.2s;
+}
+.botonefecto2:before{
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-bottom: 1.5px solid #0062cc;
+  border-right: 1.5px solid #0062cc;
+  position: absolute;
+  left: -1;
+  right: 0;
+  bottom: 0;
+  top: -1;
+  transition: all 0.2s;
+}
+.botonefecto2:hover:after{
+  width: 185px;
+  height: 70px;
+}
+.botonefecto2:hover:before{
+  width: 185px;
+  height: 70px;
+}
+.botonefecto3{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #dc3445;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto3:after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-top: 1.5px solid #dc3445;
+  border-left: 1.5px solid #dc3445;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transition: all 0.2s;
+}
+.botonefecto3:before{
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-bottom: 1.5px solid #dc3445;
+  border-right: 1.5px solid #dc3445;
+  position: absolute;
+  left: -1;
+  right: 0;
+  bottom: 0;
+  top: -1;
+  transition: all 0.2s;
+}
+.botonefecto3:hover:after{
+  width: 185px;
+  height: 70px;
+}
+.botonefecto3:hover:before{
+  width: 185px;
+  height: 70px;
+}
+.botonefecto4{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #343a40;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto4:after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-top: 1.5px solid #343a40;
+  border-left: 1.5px solid #343a40;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  transition: all 0.2s;
+}
+.botonefecto4:before{
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-bottom: 1.5px solid #343a40;
+  border-right: 1.5px solid #343a40;
+  position: absolute;
+  left: -1;
+  right: 0;
+  bottom: 0;
+  top: -1;
+  transition: all 0.2s;
+}
+.botonefecto4:hover:after{
+  width: 185px;
+  height: 70px;
+}
+.botonefecto4:hover:before{
+  width: 185px;
+  height: 70px;
+}
+.titulo{
+  font-size: 40px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+  border: 2;
+}
+#calcular{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  background: #1E90FF;
+  font-weight: bold;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 50px;
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+#calcular:hover, #calcular:focus, #calcular:active{
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.pahorcado{
+  font-family: "montserrat",sans-serif;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+#letra{
+  font-family: "montserrat",sans-serif;
+  font-size: 20px;
+    margin-bottom: 50px;
+}
+#volverprueba{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: "montserrat",sans-serif;
+}
+#volverprueba:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: "montserrat",sans-serif;
+}
+.footer{
+  background: #162c3b;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 85%;
+  bottom: -160%;
+  color: #fff;
+}
+.footer ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    color: #fff;
+}
+.footer ul li{
+  list-style: none;
+    color: #fff;
+}
+.footer ul li a{
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+    color: #fff;
+}
+.footer ul li a img{
+  filter: invert(1);
+  max-width: 20px;
+    color: #fff;
+}
+@media only screen and (min-width: 1368px){
+  #ahorcado{
+  height: 242px;
+  width: 302px;
+  margin-top: 150px;
+  background-image: url('../assets/img/Imagen Ahorcados.png');
+  position: absolute;
+    right: 35%;
+}
+.botonefecto{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #27a745;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto2{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #0062cc;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto3{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #dc3445;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto4{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #343a40;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#output{
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: "montserrat",sans-serif;
+}
+#volverajugar:hover{
+width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: "montserrat",sans-serif;
+}
+#aprendermas{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#home:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .15s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#aprendermas2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#home2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .1s;
+  font-family: 'Oswald', sans-serif;
+}
+.titulo{
+  font-size: 40px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.pahorcado{
+  font-family: "montserrat",sans-serif;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+#letra{
+  font-family: "montserrat",sans-serif;
+  font-size: 20px;
+    margin-bottom: 50px;
+    border: 2;
+}
+.footer{
+  background: #162c3b;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 85%;
+  bottom: -160%;
+  color: #fff;
+}
+.footer ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    color: #fff;
+}
+.footer ul li{
+  list-style: none;
+    color: #fff;
+}
+.footer ul li a{
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+    color: #fff;
+}
+.footer ul li a img{
+  filter: invert(1);
+  max-width: 20px;
+    color: #fff;
+}
+}
+@media only screen and (max-width: 1024px){
+  #ahorcado{
+  height: 242px;
+  width: 302px;
+  margin-top: 150px;
+  background-image: url('../assets/img/Imagen Ahorcados.png');
+  position: absolute;
+    right: 40%;
+}
+#output{
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+.botonefecto{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #27a745;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto2{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #0062cc;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto3{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #dc3445;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto4{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #343a40;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#volverajugar{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#home:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#aprendermas2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#home2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all 5s;
+  font-family: 'Oswald', sans-serif;
+}
+.titulo{
+  font-size: 40px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.pahorcado{
+  font-family: "montserrat",sans-serif;f;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+#letra{
+  font-family: "montserrat",sans-serif;
+  font-size: 20px;
+    margin-bottom: 50px;
+}
+.footer{
+  background: #162c3b;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 85%;
+  bottom: -40%;
+  color: #fff;
+}
+.footer ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    color: #fff;
+}
+.footer ul li{
+  list-style: none;
+    color: #fff;
+}
+.footer ul li a{
+  text-decoration: none;
+  display: inline-block;
+  margin: 0 10px;
+    color: #fff;
+}
+.footer ul li a img{
+  filter: invert(1);
+  max-width: 20px;
+    color: #fff;
+}
+  }
+  @media only screen and (max-width: 768px){
+  #ahorcado{
+  height: 242px;
+  width: 302px;
+  margin-top: 150px;
+  background-image: url('../assets/img/Imagen Ahorcados.png');
+  position: absolute;
+    right: 40%;
+}
+#output{
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#home:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#aprendermas2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#home2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all 5s;
+  font-family: 'Oswald', sans-serif;
+}
+.titulo{
+  font-size: 40px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.pahorcado{
+  font-family: "montserrat",sans-serif;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+#letra{
+  font-family: "montserrat",sans-serif;
+  font-size: 20px;
+    margin-bottom: 50px;
+}
+  }
+  @media only screen and (max-width: 540px){
+  #ahorcado{
+  height: 242px;
+  width: 302px;
+  margin-top: 150px;
+  background-image: url('../assets/img/Imagen Ahorcados.png');
+  position: absolute;
+    right: 20%;
+}
+#output{
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+.botonefecto{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #27a745;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto2{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #0062cc;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto3{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #dc3445;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto4{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #343a40;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#volverajugar{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#home:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#aprendermas2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#home2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all 5s;
+  font-family: 'Oswald', sans-serif;
+}
+.titulo{
+  font-size: 30px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.pahorcado{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+#letra{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+    margin-bottom: 50px;
+}
+ .ppistas{
+    font-family: "montserrat",sans-serif;
+    font-size: 18px;
+     margin-top: 30px;
+     margin-bottom: 20px;
+}
+.titulopistas{
+    font-size: 30px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+}
+  }
+   @media only screen and (max-width: 414px){
+  #ahorcado{
+  height: 242px;
+  width: 302px;
+  margin-top: 150px;
+  background-image: url('../assets/img/Imagen Ahorcados.png');
+  position: absolute;
+    right: 20%;
+}
+.botonefecto{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #27a745;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto2{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #0062cc;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto3{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #dc3445;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto4{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #343a40;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#output{
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#home:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#aprendermas2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#home2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all 5s;
+  font-family: 'Oswald', sans-serif;
+}
+.titulo{
+  font-size: 30px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.pahorcado{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+#letra{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+    margin-bottom: 50px;
+}
+ .ppistas{
+    font-family: "montserrat",sans-serif;
+    font-size: 18px;
+     margin-top: 30px;
+     margin-bottom: 20px;
+}
+.titulopistas{
+    font-size: 30px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+}
+  }
+  @media only screen and (max-width: 411px){
+  #ahorcado{
+  height: 242px;
+  width: 302px;
+  margin-top: 150px;
+  background-image: url('../assets/img/Imagen Ahorcados.png');
+  position: absolute;
+    right: 20%;
+}
+#output{
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+.botonefecto{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #27a745;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto2{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #0062cc;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto3{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #dc3445;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto4{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #343a40;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#volverajugar{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#home:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#aprendermas2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#home2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all 5s;
+  font-family: 'Oswald', sans-serif;
+}
+.titulo{
+  font-size: 30px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.pahorcado{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+#letra{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+    margin-bottom: 50px;
+}
+ .ppistas{
+    font-family: "montserrat",sans-serif;
+    font-size: 18px;
+     margin-top: 30px;
+     margin-bottom: 20px;
+}
+.titulopistas{
+    font-size: 30px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+}
+  }
+  @media only screen and (max-width: 375px){
+  #ahorcado{
+  height: 242px;
+  width: 302px;
+  margin-top: 150px;
+  background-image: url('../assets/img/Imagen Ahorcados.png');
+  position: absolute;
+    right: 20%;
+}
+.botonefecto{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #27a745;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto2{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #0062cc;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto3{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #dc3445;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto4{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #343a40;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#output{
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#home:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#aprendermas2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#home2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all 5s;
+  font-family: 'Oswald', sans-serif;
+}
+.titulo{
+  font-size: 30px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.pahorcado{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+#letra{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+    margin-bottom: 50px;
+}
+ .ppistas{
+    font-family: "montserrat",sans-serif;
+    font-size: 18px;
+     margin-top: 30px;
+     margin-bottom: 20px;
+}
+.titulopistas{
+    font-size: 30px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+}
+  }
+   @media only screen and (max-width: 360px){
+  #ahorcado{
+  height: 242px;
+  width: 302px;
+  margin-top: 150px;
+  background-image: url('../assets/img/Imagen Ahorcados.png');
+  position: absolute;
+    right: 20%;
+}
+.botonefecto{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #27a745;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto2{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #0062cc;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto3{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #dc3445;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto4{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #343a40;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#output{
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#home:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#aprendermas2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#home2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all 5s;
+  font-family: 'Oswald', sans-serif;
+}
+.titulo{
+  font-size: 30px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.pahorcado{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+#letra{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+    margin-bottom: 50px;
+}
+
+ .ppistas{
+    font-family: "montserrat",sans-serif;
+    font-size: 18px;
+     margin-top: 30px;
+     margin-bottom: 20px;
+}
+.titulopistas{
+    font-size: 30px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+}
+  }
+  @media only screen and (max-width: 320px){
+  #ahorcado{
+  height: 242px;
+  width: 302px;
+  margin-top: 150px;
+  background-image: url('../assets/img/Imagen Ahorcados.png');
+  position: absolute;
+    right: 7%;
+}
+.botonefecto{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #27a745;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto2{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #0062cc;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto3{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #dc3445;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto4{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #343a40;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#output{
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#home:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#aprendermas2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#home2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all 5s;
+  font-family: 'Oswald', sans-serif;
+}
+.titulo{
+  font-size: 30px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.pahorcado{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+#letra{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+    margin-bottom: 50px;
+}
+ .ppistas{
+    font-family: "montserrat",sans-serif;
+    font-size: 18px;
+     margin-top: 30px;
+     margin-bottom: 20px;
+}
+.titulopistas{
+    font-size: 30px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+}
+  }
+  @media only screen and (max-width: 280px){
+  #ahorcado{
+  height: 242px;
+  width: 302px;
+  margin-top: 150px;
+  background-image: url('../assets/img/Imagen Ahorcados.png');
+  position: absolute;
+    right: -20%;
+}
+.botonefecto{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #27a745;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto2{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #0062cc;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto3{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #dc3445;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.botonefecto4{
+  margin-top: 50px;
+  width: 190px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1.5px solid transparent;
+  color: #343a40;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+#output{
+  font-size: 40px;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#home:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+  font-family: 'Oswald', sans-serif;
+}
+#volverajugar2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#aprendermas2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#aprendermas2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all .5s;
+  font-family: 'Oswald', sans-serif;
+}
+#home2{
+  margin-top: 20px;
+  width: 100px;
+  height: 70px;
+  border-radius: 25px;
+  color: black;
+  background-color: white;
+}
+#home2:hover{
+  width: 130px;
+  height: 100px;
+  border-radius: 25px;
+  color: white;
+  background-color: black;
+  transition: all 5s;
+  font-family: 'Oswald', sans-serif;
+}
+.titulo{
+  font-size: 30px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.pahorcado{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+#letra{
+  font-family: "montserrat",sans-serif;
+  font-size: 18px;
+    margin-bottom: 50px;
+}
+  }
+  #mostrar{
+    height: 70px;
+    width: 70px;
+}
+#ocultar{
+    height: 70px;
+    width: 70px;
+}
+#MostrarOcultar{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+     margin-top: 30px;
+     visibility: hidden;
+     margin-bottom: 30px;
+}
+#mostrar2{
+    height: 70px;
+    width: 70px;
+}
+#ocultar2{
+    height: 70px;
+    width: 70px;
+}
+#MostrarOcultar2{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 20px;
+     margin-top: 30px;
+     visibility: hidden;
+     margin-bottom: 20px;
+}
+}
+.contenedorcursos{
+  width: 100%;
+  margin-top: 100px;
+  border-top: 6px solid #65d6a6;
+   align-items: center;
+  justify-content: center;
+}
+.title{
+  font-size: 40px;
+  margin-bottom: 60px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+   border-top: 6px solid #65d6a6;
+}
+.contenedorcursos img{
+  width: 350px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.subtitulo{
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.cursos{
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.h1cursos{
+  font-size: 40px;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.pcursos{
+  font-size: 19px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 30px;
+}
+@media only screen and (max-width: 360px){
+  .contenedorcursos img{
+    width: 300px;
+  }
+}
+#button-up{
+  width: 60px;
+  height: 60px;
+  background: #46a2fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  border: 4px solid transparent;
+  transition: all 300ms ease;
+}
+#button-up:hover{
+  transform: scale(1.1);
+  border-color: rgba(0,0,0,0.1);
+}

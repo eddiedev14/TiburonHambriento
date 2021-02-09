@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora Online</title>
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="../DISEÑOS INKSCAPE/LOGO PAGINA WEB CIRCULAR.png">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+	  <link rel="stylesheet" href="../css/estiloscalculadora16ph.css">
+</head>
+<body>
+  	 <div class="encabezado">
+    <h2 class="logo">TIBURON HAMBRIENTO</h2>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="mostrarmenu">
+      <i class="fas fa-ellipsis-h"></i>
+    </label>
+
+    <ul class="menu">
+      <a href="../index.html">Home</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalfisica.html">Física</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalquimica.html">Química</a>
+      <a href="../Paginas Cursos Materias/paginaprincipalbiologia.html">Biología</a>
+      <a href="../Paginas Cursos Materias/paginaprincipaltecno.html">Tecnología</a>
+      <a href="#">Contactanos</a>
+      <label for="chk" class="escondermenu">
+        <i class="fas fa-times"></i>
+      </label>
+    </ul>
+  </div>
+<div class="contenedorcursos">
+      <h1 class="title">PH</h1>
+      <center><img src="../assets/img/descarga (19).jpg"></center>
+      <h1 class="subtitulo">¿En que Consiste?</h1>
+      <p class="pcursos">Bienvenido a la Calculadora sobre Química, aquí podrás determinar fácilmente si tu ph es poco ácido, algo ácido, muy ácido, neutro, poco alcalino, algo alcalino y muy alcalino, a parir de que de 0 a 1 es muy ácido, de 2 a 4 es algo ácido, de 5 a 6 es poco ácido, 7 es neutro, de 8 a 9 es poco alcalino, de 10 a 12 es algo alcalino y de 13 a 14 es muy alcalino.</p>
+      <h1 class="titulowebgrafia">WebGrafia</h1>
+    <p class="textowebgrafia">Información Basada en: <a href="https://concepto.de/ph/">Concepto de Ph y escala de medida</a></p>
+    </div>
+
+
+    <h1 class="titulocalculadora">Calculadora PH</h1>
+      <h1 class="titulocalculadora">Determinar Valores de PH</h1>
+      <h1 class="pasos">Paso #1 Ingresa el Ph (Ten en Cuenta que el Ph SIEMPRE va a tener 2 cifras decimales y que va de 0 a 14) Ingresa un Numero para que este funcione</h1>
+      <center><input type="text" id="numero1" placeholder="Ph" maxlength="5">
+        <br>
+        <br>
+        <button class="btn-hover color-2" id="calcular1">CALCULAR</button>
+      </div>
+      <center><output id="n"></output></center>
+
+      <script type="text/javascript" src="../js/jscalculadora16ph.js"></script>
+  </body>
+  </html>
